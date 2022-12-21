@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./css/bonito.css"
 
 function App() {
   const [list, setList] = useState([]);
@@ -25,14 +26,14 @@ function App() {
   };
 
   return (
-    <div>
+    <div className="bonito">
       <h1>To do List</h1>
       <input
         type="text"
         value={input}
         onChange={(e) => setInput(e.target.value)}
       />
-      <button onClick={() => addTodo(input)}>Add</button>
+      <button onClick={() => addTodo(input)}><div className="letra">Add</div></button>
       <ul>
         {list.map((todo) => (
           <li key={todo.id}>
